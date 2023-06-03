@@ -46,9 +46,7 @@ They were sorted from the first theme to the last.
     - [Weights](./weights.cpp) has a complex clause, therefore I provide the translation:
 
         Tolik came up with a new programming technology. He wants to persuade his friends to use it. The i-th friend will agree to use Tolik's technology if his authority is not less than a_i (some integer). As soon as the i-th friend starts using it, the number b_i will be added to Tolik's authority (there are people who have b_i < 0). Help Tolik guide as many of his friends on the right path as possible.
-    - [Adventure](./adventure.cpp) The students fell into a pit. It is necessary to find the configuration of the turret of students so that the maximum number of people
-
- can get out of the pit.
+    - [Adventure](./adventure.cpp) The students fell into a pit. It is necessary to find the configuration of the turret of students so that the maximum number of people can get out of the pit.
 
 - #### Cartesian tree
     - [K-maximum](./k-maximum.cpp) to find the k maximum in a sorted array.
