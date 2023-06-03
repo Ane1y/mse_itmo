@@ -1,0 +1,421 @@
+ncomp_ctor_string_explicit.cpp:11:14: error: invalid operands to binary expression ('mp::bignum' and 'std::string' (aka 'basic_string<char>'))
+    (void)(n + str);
+           ~ ^ ~~~
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3546:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:627:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:630:5: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_string'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:1786:5: note: candidate template ignored: could not match 'move_iterator' against 'basic_string'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3432:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3472:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3489:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3502:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3509:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3516:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3539:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3553:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3560:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:606:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+./../bignum.hpp:103:27: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const mp::bignum' for 1st argument
+    inline bignum bignum::operator+(const bignum &right) const {
+                          ^
+1 error generated.
+ncomp_operator_bool_implicit.cpp:12:9: error: no viable conversion from 'mp::bignum' to 'int'
+    int x = n + 1;
+        ^   ~~~~~
+1 error generated.
+ncomp_polynomial_ctor_string_explicit.cpp:8:19: error: expected ';' after expression
+    mp::polynomial p("1*x^0");
+                  ^
+                  ;
+ncomp_polynomial_ctor_string_explicit.cpp:8:9: error: no member named 'polynomial' in namespace 'mp'
+    mp::polynomial p("1*x^0");
+    ~~~~^
+ncomp_polynomial_ctor_string_explicit.cpp:8:20: error: use of undeclared identifier 'p'
+    mp::polynomial p("1*x^0");
+                   ^
+ncomp_polynomial_ctor_string_explicit.cpp:10:5: error: use of undeclared identifier 'p'
+    p = std::string("10*x^0");
+    ^
+ncomp_polynomial_ctor_string_explicit.cpp:12:12: error: use of undeclared identifier 'p'
+    (void)(p(0));
+           ^
+5 errors generated.
+ncomp_ctor_string_explicit.cpp:11:14: error: invalid operands to binary expression ('mp::bignum' and 'std::string' (aka 'basic_string<char>'))
+    (void)(n + str);
+           ~ ^ ~~~
+./../bignum.hpp:104:13: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const mp::bignum' for 2nd argument
+     bignum operator+(const bignum &lhs, const bignum &rhs)  {
+            ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3546:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:627:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:630:5: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_string'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:1786:5: note: candidate template ignored: could not match 'move_iterator' against 'basic_string'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3432:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3472:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3489:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3502:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3509:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3516:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3539:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3553:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3560:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:606:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+1 error generated.
+/usr/bin/ld:ncomp_err.txt: file format not recognized; treating as linker script
+/usr/bin/ld:ncomp_err.txt:1: syntax error
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+/usr/bin/ld: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../lib64/Scrt1.o: в функции «_start»:
+/build/glibc/src/glibc/csu/../sysdeps/x86_64/start.S:103: неопределённая ссылка на «main»
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+ncomp_operator_bool_implicit.cpp:12:9: error: no viable conversion from 'mp::bignum' to 'int'
+    int x = n + 1;
+        ^   ~~~~~
+1 error generated.
+ncomp_polynomial_ctor_string_explicit.cpp:8:19: error: expected ';' after expression
+    mp::polynomial p("1*x^0");
+                  ^
+                  ;
+ncomp_polynomial_ctor_string_explicit.cpp:8:9: error: no member named 'polynomial' in namespace 'mp'
+    mp::polynomial p("1*x^0");
+    ~~~~^
+ncomp_polynomial_ctor_string_explicit.cpp:8:20: error: use of undeclared identifier 'p'
+    mp::polynomial p("1*x^0");
+                   ^
+ncomp_polynomial_ctor_string_explicit.cpp:10:5: error: use of undeclared identifier 'p'
+    p = std::string("10*x^0");
+    ^
+ncomp_polynomial_ctor_string_explicit.cpp:12:12: error: use of undeclared identifier 'p'
+    (void)(p(0));
+           ^
+5 errors generated.
+ncomp_ctor_string_explicit.cpp:11:14: error: invalid operands to binary expression ('mp::bignum' and 'std::string' (aka 'basic_string<char>'))
+    (void)(n + str);
+           ~ ^ ~~~
+./../bignum.hpp:104:13: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const mp::bignum' for 2nd argument
+     bignum operator+(const bignum &lhs, const bignum &rhs)  {
+            ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3546:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:627:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:630:5: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_string'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:1786:5: note: candidate template ignored: could not match 'move_iterator' against 'basic_string'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3432:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3472:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3489:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3502:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3509:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3516:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3539:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3553:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3560:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:606:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+1 error generated.
+/usr/bin/ld:ncomp_err.txt: file format not recognized; treating as linker script
+/usr/bin/ld:ncomp_err.txt:1: syntax error
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+/usr/bin/ld: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../lib64/Scrt1.o: в функции «_start»:
+/build/glibc/src/glibc/csu/../sysdeps/x86_64/start.S:103: неопределённая ссылка на «main»
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+ncomp_operator_bool_implicit.cpp:12:9: error: no viable conversion from 'mp::bignum' to 'int'
+    int x = n + 1;
+        ^   ~~~~~
+1 error generated.
+ncomp_polynomial_ctor_string_explicit.cpp:8:19: error: expected ';' after expression
+    mp::polynomial p("1*x^0");
+                  ^
+                  ;
+ncomp_polynomial_ctor_string_explicit.cpp:8:9: error: no member named 'polynomial' in namespace 'mp'
+    mp::polynomial p("1*x^0");
+    ~~~~^
+ncomp_polynomial_ctor_string_explicit.cpp:8:20: error: use of undeclared identifier 'p'
+    mp::polynomial p("1*x^0");
+                   ^
+ncomp_polynomial_ctor_string_explicit.cpp:10:5: error: use of undeclared identifier 'p'
+    p = std::string("10*x^0");
+    ^
+ncomp_polynomial_ctor_string_explicit.cpp:12:12: error: use of undeclared identifier 'p'
+    (void)(p(0));
+           ^
+5 errors generated.
+ncomp_ctor_string_explicit.cpp:11:14: error: invalid operands to binary expression ('mp::bignum' and 'std::string' (aka 'basic_string<char>'))
+    (void)(n + str);
+           ~ ^ ~~~
+./../bignum.hpp:104:13: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const mp::bignum' for 2nd argument
+     bignum operator+(const bignum &lhs, const bignum &rhs)  {
+            ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3546:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:627:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:630:5: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_string'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:1786:5: note: candidate template ignored: could not match 'move_iterator' against 'basic_string'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3432:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3472:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3489:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3502:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3509:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3516:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3539:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3553:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3560:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:606:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+1 error generated.
+/usr/bin/ld:ncomp_err.txt: file format not recognized; treating as linker script
+/usr/bin/ld:ncomp_err.txt:1: syntax error
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+/usr/bin/ld: /usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../lib64/Scrt1.o: в функции «_start»:
+/build/glibc/src/glibc/csu/../sysdeps/x86_64/start.S:103: неопределённая ссылка на «main»
+clang-14: error: linker command failed with exit code 1 (use -v to see invocation)
+ncomp_operator_bool_implicit.cpp:12:9: error: no viable conversion from 'mp::bignum' to 'int'
+    int x = n + 1;
+        ^   ~~~~~
+1 error generated.
+ncomp_polynomial_ctor_string_explicit.cpp:8:19: error: expected ';' after expression
+    mp::polynomial p("1*x^0");
+                  ^
+                  ;
+ncomp_polynomial_ctor_string_explicit.cpp:8:9: error: no member named 'polynomial' in namespace 'mp'
+    mp::polynomial p("1*x^0");
+    ~~~~^
+ncomp_polynomial_ctor_string_explicit.cpp:8:20: error: use of undeclared identifier 'p'
+    mp::polynomial p("1*x^0");
+                   ^
+ncomp_polynomial_ctor_string_explicit.cpp:10:5: error: use of undeclared identifier 'p'
+    p = std::string("10*x^0");
+    ^
+ncomp_polynomial_ctor_string_explicit.cpp:12:12: error: use of undeclared identifier 'p'
+    (void)(p(0));
+           ^
+5 errors generated.
+ncomp_ctor_string_explicit.cpp:11:14: error: invalid operands to binary expression ('mp::bignum' and 'std::string' (aka 'basic_string<char>'))
+    (void)(n + str);
+           ~ ^ ~~~
+./../bignum.hpp:104:13: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const mp::bignum' for 2nd argument
+     bignum operator+(const bignum &lhs, const bignum &rhs)  {
+            ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3546:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:627:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:630:5: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_string'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:1786:5: note: candidate template ignored: could not match 'move_iterator' against 'basic_string'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3432:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3472:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3489:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3502:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3509:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3516:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3539:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3553:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3560:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:606:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+1 error generated.
+ncomp_operator_bool_implicit.cpp:12:9: error: no viable conversion from 'mp::bignum' to 'int'
+    int x = n + 1;
+        ^   ~~~~~
+1 error generated.
+ncomp_polynomial_ctor_string_explicit.cpp:8:19: error: expected ';' after expression
+    mp::polynomial p("1*x^0");
+                  ^
+                  ;
+ncomp_polynomial_ctor_string_explicit.cpp:8:9: error: no member named 'polynomial' in namespace 'mp'
+    mp::polynomial p("1*x^0");
+    ~~~~^
+ncomp_polynomial_ctor_string_explicit.cpp:8:20: error: use of undeclared identifier 'p'
+    mp::polynomial p("1*x^0");
+                   ^
+ncomp_polynomial_ctor_string_explicit.cpp:10:5: error: use of undeclared identifier 'p'
+    p = std::string("10*x^0");
+    ^
+ncomp_polynomial_ctor_string_explicit.cpp:12:12: error: use of undeclared identifier 'p'
+    (void)(p(0));
+           ^
+5 errors generated.
+ncomp_ctor_string_explicit.cpp:11:14: error: invalid operands to binary expression ('mp::bignum' and 'std::string' (aka 'basic_string<char>'))
+    (void)(n + str);
+           ~ ^ ~~~
+./../bignum.hpp:103:13: note: candidate function not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const mp::bignum' for 2nd argument
+     bignum operator+(const bignum &lhs, const bignum &rhs)  {
+            ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3546:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:627:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('mp::bignum' vs. 'char')
+    operator+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:630:5: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_string'
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/stl_iterator.h:1786:5: note: candidate template ignored: could not match 'move_iterator' against 'basic_string'
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3432:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3472:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3489:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3502:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3509:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3516:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3539:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3553:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.h:3560:5: note: candidate template ignored: could not match 'basic_string<_CharT, _Traits, _Alloc>' against 'mp::bignum'
+    operator+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,
+    ^
+/usr/bin/../lib64/gcc/x86_64-pc-linux-gnu/12.2.0/../../../../include/c++/12.2.0/bits/basic_string.tcc:606:5: note: candidate template ignored: could not match 'const _CharT *' against 'mp::bignum'
+    operator+(const _CharT* __lhs,
+    ^
+1 error generated.
+ncomp_operator_bool_implicit.cpp:12:9: error: no viable conversion from 'mp::bignum' to 'int'
+    int x = n + 1;
+        ^   ~~~~~
+1 error generated.
