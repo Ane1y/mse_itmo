@@ -1,4 +1,4 @@
-# Whatever Class
+# Whatever
 
 The `whatever` class is a non-template class that allows storing and retrieving values of arbitrary types in a type-safe manner. It provides a flexible and convenient way to work with heterogeneous objects within a single common type.
 
