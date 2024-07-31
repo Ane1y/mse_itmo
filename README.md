@@ -27,3 +27,6 @@ During this course, the following programs were implemented:
 Scripts that utilize magic methods, generators, and decorators.
 
 For more information, see the [README](./python/README.md) file.
+
+### [High performance computing](./hpc/)
+During this course [Lock Free Set](./hpc/lock_free_set) in Java was implemented
